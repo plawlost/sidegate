@@ -1,60 +1,36 @@
-# sidegate
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> drag any app into its own private wireguard tunnel. keep the rest of your mac on the raw network.
+## Getting Started
 
-![screenshot](./assets/hero.png)
-
-## why
-
-in many countries a full-device vpn hurts speed, battery, and sometimes draws unwanted attention. sidegate lets you unblock just the tools you need, leaving everything else alone.
-
-## branches
-
-| branch | purpose |
-| --- | --- |
-| `main` | stable releases, tagged v0.x |
-| `landing-page` | nextjs site that lives at https://sidegate.app |
-| `macos-app` | swiftui source for the native menubar client |
-| `dev` | scratch work merged into other branches when ready |
-
-## features
-
-- per-app split tunnelling with NetworkExtension
-- embedded `wireguard-go`, no kernel install
-- per-domain mode using a local PAC file
-- latency badge and auto-stop on target exit
-- config lives locally, never touches the cloud
-- mit license
-
-## quick start
+First, run the development server:
 
 ```bash
-# clone
-git clone https://github.com/plawlabs/sidegate.git
-cd sidegate
-
-# build the mac client
-git switch macos-app
-open Sidegate.xcodeproj   # run in Xcode 15+
-
-# run the landing page
-git switch landing-page
-pnpm i
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
-````
+# or
+bun dev
+```
 
-## roadmap
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-* [ ] auto-update with sparkle
-* [ ] windows client using wintun
-* [ ] linux cli
-* [ ] hosted exit-node network and paid plans
-* [ ] team dashboard with device inventory
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## contributing
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-pull requests and issue reports are welcome. check `/CONTRIBUTING.md` for setup and coding style.
+## Learn More
 
-## license
+To learn more about Next.js, take a look at the following resources:
 
-sidegate is released under the MIT license. see `LICENSE` for details.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
