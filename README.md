@@ -1,2 +1,43 @@
 # sidegate
-sidegate lets you drag any app into a private wireguard tunnel so only that traffic slips past censors while the rest of your mac stays raw.
+
+> drag any app into its own private wireguard tunnel. keep the rest of your mac on the raw network.
+
+![screenshot](./assets/hero.png)
+
+## why
+
+in many countries a full-device vpn hurts speed, battery, and sometimes draws unwanted attention. sidegate lets you unblock just the tools you need, leaving everything else alone.
+
+## branches
+
+| branch | purpose |
+| --- | --- |
+| `main` | stable releases, tagged v0.x |
+| `landing-page` | nextjs site that lives at https://sidegate.app |
+| `macos-app` | swiftui source for the native menubar client |
+| `dev` | scratch work merged into other branches when ready |
+
+## features
+
+- per-app split tunnelling with NetworkExtension
+- embedded `wireguard-go`, no kernel install
+- per-domain mode using a local PAC file
+- latency badge and auto-stop on target exit
+- config lives locally, never touches the cloud
+- mit license
+
+## quick start
+
+```bash
+# clone
+git clone https://github.com/plawlabs/sidegate.git
+cd sidegate
+
+# build the mac client
+git switch macos-app
+open Sidegate.xcodeproj   # run in Xcode 15+
+
+# run the landing page
+git switch landing-page
+pnpm i
+pnpm dev
