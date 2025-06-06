@@ -65,15 +65,17 @@ function AppSidebar() {
       <SidebarFooter>
          <div className="p-2">
           <NavLink href="#" icon={LifeBuoy}>Help & Support</NavLink>
-          <div className="flex items-center gap-3 mt-4 px-3">
-            <Avatar className="w-8 h-8">
-              <AvatarImage src="" />
-              <AvatarFallback className="bg-muted text-primary font-semibold text-xs">Y</AvatarFallback>
-            </Avatar>
-            <p className={cn("text-xs text-muted-foreground font-sans transition-opacity whitespace-nowrap", open ? "opacity-100" : "opacity-0")}>
-              built by yaz
-            </p>
-          </div>
+          <a href="https://x.com/plawlost" target="_blank" rel="noopener noreferrer">
+            <div className="flex items-center gap-3 mt-4 px-3">
+              <Avatar className="w-8 h-8">
+                <AvatarImage src="https://unavatar.io/twitter/plawlost" />
+                <AvatarFallback className="bg-muted text-primary font-semibold text-xs">P</AvatarFallback>
+              </Avatar>
+              <p className={cn("text-xs text-muted-foreground font-sans transition-opacity whitespace-nowrap", open ? "opacity-100" : "opacity-0")}>
+                built by plawlost
+              </p>
+            </div>
+          </a>
         </div>
       </SidebarFooter>
     </Sidebar>
@@ -285,12 +287,12 @@ export default function Home() {
               <footer className="py-12 border-t">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <p className="text-sm text-muted-foreground font-sans">
-                    built by yaz during the hackclub 100h oss sprint
+                    built by plawlost during the hackclub 100h oss sprint
                   </p>
                   <div className="flex items-center gap-4">
                     <Button variant="ghost" size="sm" asChild>
-                      <a href="#" className="text-muted-foreground hover:text-foreground text-sm">
-                        @yaz
+                      <a href="https://x.com/plawlost" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground text-sm">
+                        @plawlost
                       </a>
                     </Button>
                     <Button variant="ghost" size="sm" asChild>
